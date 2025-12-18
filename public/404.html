@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting...</title>
+  <script>
+    // GitHub Pages 404 handler for Angular SPA
+    // When a route like /contact is accessed directly, GitHub Pages serves 404.html
+    // This script preserves the path and redirects to index.html
+    // Angular's router will then handle the routing client-side
+    
+    var path = window.location.pathname;
+    var search = window.location.search;
+    var hash = window.location.hash;
+    
+    // Store the original URL in sessionStorage for index.html to restore
+    sessionStorage.redirect = path + search + hash;
+    
+    // Redirect to index.html (Angular router will handle the path)
+    window.location.replace(window.location.origin + '/index.html');
+  </script>
+</head>
+<body>
+  <p>Redirecting...</p>
+  <noscript>
+    <p>Please enable JavaScript to view this site.</p>
+  </noscript>
+  <script>
+    // Padding to ensure file is at least 512 bytes
+    // Some browsers require 404 pages to be at least 512 bytes
+    var padding = 'x'.repeat(300);
+  </script>
+</body>
+</html>
+

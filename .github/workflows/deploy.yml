@@ -24,6 +24,11 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Copy index.html to 404.html
+        # GitHub Pages serves 404.html for any route that doesn't exist
+        # By copying index.html to 404.html, Angular router can handle all routes
+        run: cp ./dist/ostyyc/browser/index.html ./dist/ostyyc/browser/404.html
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         if: github.ref == 'refs/heads/main'

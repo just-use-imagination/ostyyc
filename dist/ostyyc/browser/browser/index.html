@@ -27,6 +27,21 @@
   <base href="/">
   <!-- For GitHub Pages, change base href to "/ostyyc/" if deploying to a subdirectory -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Handle GitHub Pages 404 redirect for client-side routing -->
+  <script>
+    // Single Page Apps for GitHub Pages
+    // This script checks if we're being redirected from 404.html
+    // and restores the original path for Angular router
+    (function() {
+      var redirect = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+      if (redirect && redirect !== location.pathname + location.search + location.hash) {
+        // Restore the original path before Angular bootstraps
+        history.replaceState(null, null, redirect);
+      }
+    })();
+  </script>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   
   <!-- Structured Data (JSON-LD) -->
