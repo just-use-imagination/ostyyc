@@ -1,0 +1,24 @@
+{
+  "name": "OSTYYC - Oleksandr Stepanenko",
+  "short_name": "OSTYYC",
+  "description": "Professional solutions for your business needs",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48 32x32",
+      "type": "image/x-icon"
+    }
+  ],
+  "theme_color": "#d4af37",
+  "background_color": "#000000",
+  "display": "standalone",
+  "start_url": "/",
+  "scope": "/"
+}
+
